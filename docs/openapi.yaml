@@ -1,0 +1,119 @@
+openapi: '3.1.0'
+info:
+  title: Zenith Connect API
+  version: '1.0.0'
+  description: Privacy-first P2P dating app API
+  contact:
+    name: CerisonAutomation
+    url: https://github.com/CerisonAutomation/zenith-connect
+
+servers:
+  - url: https://zenithconnect.app
+    description: Production
+  - url: http://localhost:3000
+    description: Local development
+
+security:
+  - BearerAuth: []
+
+paths:
+  /api/health:
+    get:
+      summary: Health check
+      security: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: { type: string, example: ok }
+                  ts: { type: number }
+
+  /api/ai:
+    post:
+      summary: AI chat / icebreaker / bio generation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [messages]
+              properties:
+                messages:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      role: { type: string, enum: [user, assistant, system] }
+                      content: { type: string, maxLength: 4000 }
+                feature:
+                  type: string
+                  enum: [chat, icebreaker, bio, moderation]
+                model: { type: string }
+      responses:
+        '200': { description: SSE stream }
+        '401': { description: Unauthorized }
+        '429': { description: Rate limited }
+
+  /api/location:
+    post:
+      summary: Update user location
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [lat, lng]
+              properties:
+                lat: { type: number, minimum: -90, maximum: 90 }
+                lng: { type: number, minimum: -180, maximum: 180 }
+      responses:
+        '200': { description: OK }
+        '401': { description: Unauthorized }
+        '429': { description: Rate limited }
+
+  /api/block:
+    post:
+      summary: Block a user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [blocked_id]
+              properties:
+                blocked_id: { type: string, format: uuid }
+      responses:
+        '200': { description: OK }
+        '422': { description: Cannot block yourself }
+
+  /api/report:
+    post:
+      summary: Report a user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [reported_id, reason]
+              properties:
+                reported_id: { type: string, format: uuid }
+                reason: { type: string, maxLength: 100 }
+                details: { type: string, maxLength: 1000 }
+      responses:
+        '200': { description: OK }
+        '429': { description: Rate limited (max 5/hr) }
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

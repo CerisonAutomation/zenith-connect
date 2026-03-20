@@ -1,4 +1,5 @@
 import { createClient } from '@/lib/supabase/server'
+import { getConversationsWithProfiles } from '@/lib/supabase/queries'
 import { ConversationList } from '@/components/chat/ConversationList'
 import type { Metadata } from 'next'
 
@@ -8,11 +9,8 @@ export default async function ChatPage() {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
 
-  const { data: conversations } = await supabase
-    .from('conversations')
-    .select('*')
-    .contains('participant_ids', [user!.id])
-    .order('last_message_at', { ascending: false })
+  // Single batched query — no N+1
+  const conversations = await getConversationsWithProfiles(supabase, user!.id)
 
-  return <ConversationList conversations={conversations ?? []} currentUserId={user!.id} />
+  return <ConversationList conversations={conversations} currentUserId={user!.id} />
 }
