@@ -1,0 +1,18 @@
+{
+  "app": { "name": "Zenith Connect", "tagline": "Conéctate cerca, con privacidad." },
+  "nav": { "discover": "Descubrir", "messages": "Mensajes", "profile": "Perfil", "settings": "Ajustes" },
+  "auth": {
+    "signIn": "Iniciar sesión", "signOut": "Cerrar sesión", "createAccount": "Crear cuenta",
+    "signingIn": "Iniciando sesión…", "creatingAccount": "Creando cuenta…",
+    "email": "Correo", "password": "Contraseña", "username": "Usuario", "age": "Edad",
+    "noAccount": "¿Sin cuenta?", "haveAccount": "¿Ya tienes una?", "createOne": "Créala",
+    "emailConfirmSent": "¡Revisa tu correo para confirmar tu cuenta!",
+    "errors": { "emailRequired": "Correo válido requerido", "passwordMin": "Mín. 8 caracteres", "usernameFormat": "Solo letras minúsculas, números, _ y -", "ageMin": "Debes tener 18+" }
+  },
+  "discover": { "title": "Descubrir", "noOne": "Nadie cerca todavía", "locationUnavailable": "Ubicación no disponible", "loading": "Buscando personas cercanas…" },
+  "chat": { "title": "Mensajes", "noConversations": "Sin conversaciones", "noConversationsHint": "Encuentra a alguien cerca para chatear", "messagePlaceholder": "Mensaje…", "connected": "Conectado (P2P)", "connecting": "Conectando…", "typing": "Escribiendo…", "edited": "editado", "send": "Enviar", "back": "Volver" },
+  "profile": { "title": "Mi perfil", "notFound": "Perfil no encontrado", "age": "{age} años", "message": "Mensaje", "edit": "Editar perfil", "verified": "Verificado", "premium": "Premium" },
+  "settings": { "title": "Ajustes", "privacy": "Privacidad", "travelMode": "Modo viaje", "travelModeHint": "Aparece explorando otra ciudad", "travelEnabled": "Modo viaje activado", "travelDisabled": "Modo viaje desactivado", "travelFailed": "Error al actualizar modo viaje", "ai": "Funciones IA", "aiNote": "Con modelos de código abierto vía OpenRouter. Tus mensajes nunca se almacenan en servidores de IA.", "language": "Idioma", "theme": "Tema", "dark": "Oscuro", "light": "Claro", "notifications": "Notificaciones", "deleteAccount": "Eliminar cuenta", "deleteAccountConfirm": "Esta acción no se puede deshacer.", "signOut": "Cerrar sesión" },
+  "errors": { "generic": "Algo salió mal", "tryAgain": "Inténtalo de nuevo", "notFound": "Página no encontrada", "unauthorized": "Debes iniciar sesión", "chatOpen": "No se pudo abrir el chat" },
+  "a11y": { "gridView": "Vista cuadrícula", "mapView": "Vista mapa", "sendMessage": "Enviar mensaje", "backButton": "Volver", "nearbyMap": "Mapa de usuarios cercanos", "verifiedBadge": "Usuario verificado", "premiumBadge": "Usuario premium", "userAvatar": "Foto de perfil de {name}" }
+}

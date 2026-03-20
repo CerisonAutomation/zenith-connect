@@ -1,0 +1,19 @@
+{
+  "name": "Zenith Connect",
+  "short_name": "Zenith",
+  "description": "Privacy-first P2P gay dating app",
+  "start_url": "/discover",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f0a1a",
+  "theme_color": "#ec4899",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable any" }
+  ],
+  "screenshots": [
+    { "src": "/screenshots/discover.png", "sizes": "390x844", "type": "image/png", "form_factor": "narrow" }
+  ],
+  "categories": ["social", "lifestyle"],
+  "lang": "en"
+}

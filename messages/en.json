@@ -1,0 +1,96 @@
+{
+  "app": {
+    "name": "Zenith Connect",
+    "tagline": "Connect nearby, privately."
+  },
+  "nav": {
+    "discover": "Discover",
+    "messages": "Messages",
+    "profile": "Profile",
+    "settings": "Settings"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "createAccount": "Create Account",
+    "signingIn": "Signing in…",
+    "creatingAccount": "Creating account…",
+    "email": "Email",
+    "password": "Password",
+    "username": "Username",
+    "age": "Age",
+    "noAccount": "No account?",
+    "haveAccount": "Already have one?",
+    "createOne": "Create one",
+    "emailConfirmSent": "Check your email to confirm your account!",
+    "errors": {
+      "emailRequired": "Valid email required",
+      "passwordMin": "Min 8 characters",
+      "usernameFormat": "Lowercase letters, numbers, _ and - only",
+      "ageMin": "Must be 18+"
+    }
+  },
+  "discover": {
+    "title": "Discover",
+    "noOne": "No one nearby yet",
+    "locationUnavailable": "Location unavailable",
+    "loading": "Finding people nearby…"
+  },
+  "chat": {
+    "title": "Messages",
+    "noConversations": "No conversations yet",
+    "noConversationsHint": "Find someone nearby to start chatting",
+    "messagePlaceholder": "Message…",
+    "connected": "Connected (P2P)",
+    "connecting": "Connecting…",
+    "typing": "Typing…",
+    "edited": "edited",
+    "send": "Send",
+    "back": "Back"
+  },
+  "profile": {
+    "title": "My Profile",
+    "notFound": "Profile not found",
+    "age": "Age {age}",
+    "message": "Message",
+    "edit": "Edit Profile",
+    "verified": "Verified",
+    "premium": "Premium"
+  },
+  "settings": {
+    "title": "Settings",
+    "privacy": "Privacy",
+    "travelMode": "Travel Mode",
+    "travelModeHint": "Show as exploring a different city",
+    "travelEnabled": "Travel mode enabled",
+    "travelDisabled": "Travel mode disabled",
+    "travelFailed": "Failed to update travel mode",
+    "ai": "AI Features",
+    "aiNote": "Powered by open-source models via OpenRouter. Your messages are never stored on AI servers.",
+    "language": "Language",
+    "theme": "Theme",
+    "dark": "Dark",
+    "light": "Light",
+    "notifications": "Notifications",
+    "deleteAccount": "Delete Account",
+    "deleteAccountConfirm": "This action cannot be undone. All your data will be permanently deleted.",
+    "signOut": "Sign Out"
+  },
+  "errors": {
+    "generic": "Something went wrong",
+    "tryAgain": "Try again",
+    "notFound": "Page not found",
+    "unauthorized": "You must be signed in",
+    "chatOpen": "Could not open chat"
+  },
+  "a11y": {
+    "gridView": "Grid view",
+    "mapView": "Map view",
+    "sendMessage": "Send message",
+    "backButton": "Go back",
+    "nearbyMap": "Nearby users map",
+    "verifiedBadge": "Verified user",
+    "premiumBadge": "Premium user",
+    "userAvatar": "Profile photo of {name}"
+  }
+}
