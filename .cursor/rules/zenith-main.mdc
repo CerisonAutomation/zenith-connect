@@ -1,0 +1,26 @@
+---
+description: Main rules for Zenith Connect — always applied
+alwaysApply: true
+---
+
+# Zenith Connect Cursor Rules
+
+Always read AGENTS.md, PROJECT_RULES.md, ARCHITECTURE.md, and SECURITY.md before responding.
+
+## Stack Quick Reference
+- Next.js 15 App Router + TypeScript strict
+- Supabase @supabase/ssr (NEVER auth-helpers-nextjs)
+- Tailwind v4 + shadcn/ui
+- OpenRouter AI (lib/ai/client.ts)
+- Trystero P2P (Nostr)
+- Stripe (Checkout + Webhooks)
+- Leaflet + OSM (NO MapTiler)
+- next-intl i18n
+
+## Non-negotiables
+- getAll/setAll cookie pattern only (see lib/supabase/)
+- Server components first; 'use client' only when necessary
+- All queries through lib/supabase/queries.ts
+- Zod validation on ALL user inputs
+- RLS on ALL new tables
+- Rate-limit all AI and payment endpoints via lib/rate-limit.ts

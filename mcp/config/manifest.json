@@ -1,0 +1,21 @@
+{
+  "name": "zenith-connect-mcp",
+  "version": "1.0.0",
+  "description": "MCP server manifest for Zenith Connect. Exposes Supabase and external API tools.",
+  "servers": [
+    {
+      "id": "supabase",
+      "name": "Supabase MCP",
+      "path": "./servers/supabase-mcp.ts",
+      "transport": "stdio",
+      "auth": "service_role",
+      "scopes": ["read:profiles", "write:profiles", "read:messages"],
+      "human_in_loop": ["write:profiles", "delete:*"]
+    }
+  ],
+  "references": [
+    "https://supabase.com/docs/guides/getting-started/mcp",
+    "https://modelcontextprotocol.io/specification/2025-11-25",
+    "https://www.philschmid.de/mcp-best-practices"
+  ]
+}
